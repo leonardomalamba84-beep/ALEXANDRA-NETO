@@ -281,15 +281,14 @@
       petals(24);
       setTimeout(()=>document.getElementById('marco20').scrollIntoView({behavior:'smooth'}),180);
     }
-    startBtn.addEventListener('click',revealExperience);
-    
-const music = new Audio('./musica/Count%20on%20Me.mp3');
+    startBtn.addEventListener('click', revealExperience);
+
+const music = new Audio('./Count%20on%20Me.mp3');
 music.preload = 'auto';
 
 startBtn.addEventListener('click', () => {
-  revealExperience();
-
   music.currentTime = 0;
+
   music.play().catch(error => {
     console.error('Não foi possível reproduzir a música:', error);
   });
